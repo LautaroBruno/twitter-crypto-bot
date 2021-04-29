@@ -13,6 +13,7 @@ const config = {
     access_token: process.env.ACCESS_TOKEN,
     access_token_secret: process.env.ACCESS_TOKEN_SECRET,
     server_url: process.env.SERVER_URL,
+    charts_api_url: process.env.CHARTS_API_URL,
 };
 
 module.exports = config;
