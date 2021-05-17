@@ -44,7 +44,7 @@ class MessageGenerator {
         message += this._getComparisonsMessages(comparisons);
         message += `\n${this._getHashtags()}`;
 
-        if (config.node_env === "dev")
+        if (config.node_env !== "prod" && config.node_env !== "production")
             message = message.replaceAll(/\$|#/g, (symbol) => `[${symbol}]`);
 
         return message;

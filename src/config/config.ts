@@ -1,13 +1,9 @@
-const dotenv = require("dotenv");
+import dotenv from "dotenv";
 
-const NODE_ENV = process.env.NODE_ENV;
-
-dotenv.config({
-    path: `.env.${NODE_ENV}`,
-});
+dotenv.config();
 
 const config = {
-    node_env: NODE_ENV,
+    node_env: process.env.NODE_ENV,
     consumer_key: process.env.CONSUMER_KEY,
     consumer_secret: process.env.CONSUMER_SECRET,
     access_token: process.env.ACCESS_TOKEN,
